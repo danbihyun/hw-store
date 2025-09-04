@@ -1,8 +1,7 @@
-
 :root {
   --black-color: #000;
   --white-color: #fff;
-  --transparent-color: transparent;
+  --transparent-color: rgba(0, 0, 0, 0.5);
   --main-color: #111111;
   --gray-color: #e5e5e5;
   --border-main: #292929;
@@ -354,7 +353,7 @@ header.sticky .navbar .nav-item .dropdown .btn {
 /* banner */
 
 .banner img {
-  height: 923px;
+  height: 900px;
 }
 
 .banner .img-inner {
