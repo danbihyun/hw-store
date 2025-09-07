@@ -84,13 +84,13 @@
             <ul class="navbar-nav text-uppercase">
               <li class="nav-item pe-4 d-flex align-items-center">
                 <a aria-current="page" href="http://127.0.0.1:5500/index.html"
-                  >Home</a
+                  >로그인/회원가입</a
                 >
               </li>
               <li class="nav-item d-flex align-items-center">
                 <div class="dropdown">
                   <a class="btn p-0 border-0" role="button">
-                    SHOP<i class="bi bi-chevron-down ms-2"></i>
+                    판매목록<i class="bi bi-chevron-down ms-2"></i>
                   </a>
                   <ul class="dropdown-menu py-0 rounded-0 border-0">
                     <li>
@@ -123,9 +123,9 @@
                     </li>
                     <li>
                       <a
-                        class="dropdown-item"
+                        class="dropdown-item border-bottom"
                         href="https://html.code4rest.com/HTML/18_Doartist/error.html"
-                        >펜던트</a
+                        >펜던트류</a
                       >
                     </li>
                     <li>
@@ -141,22 +141,15 @@
               <li class="nav-item px-4 d-flex align-items-center">
                 <a
                   aria-current="page"
-                  href="https://html.code4rest.com/HTML/18_Doartist/about.html"
-                  >About</a
-                >
-              </li>
-              <li class="nav-item px-4 d-flex align-items-center">
-                <a
-                  aria-current="page"
                   href="https://html.code4rest.com/HTML/18_Doartist/blog.html"
-                  >Blog</a
+                  >장바구니</a
                 >
               </li>
               <li class="nav-item px-4 d-flex align-items-center">
                 <a
                   aria-current="page"
                   href="https://html.code4rest.com/HTML/18_Doartist/contact.html"
-                  >Contact</a
+                  >고객센터</a
                 >
               </li>
             </ul>
@@ -200,7 +193,7 @@
                 <input
                   type="text"
                   id="searchInput"
-                  placeholder="Search ..."
+                  placeholder="검색어를 입력하세요."
                   class="text-white form-control border-0 rounded-0"
                 />
                 <a href="#" class="icon px-4 py-3" id="searchButton">
@@ -268,11 +261,11 @@
             class="nav-link active py-3 border-bottom border-main"
             aria-current="page"
             href="https://html.code4rest.com/HTML/18_Doartist/index.html"
-            >Home</a
+            >로그인/회원가입</a
           >
           <!-- dropdown start-->
           <div class="dropdown">
-            <span class="text-white">Pages</span>
+            <span class="text-white">판매목록</span>
             <a
               class="btn border-0 p-0 py-3"
               href="#"
@@ -291,35 +284,42 @@
                 <a
                   class="dropdown-item border-bottom border-main py-3"
                   href="https://html.code4rest.com/HTML/18_Doartist/gallery.html"
-                  >Our gallary</a
+                  >아크릴비즈</a
                 >
               </li>
               <li>
                 <a
                   class="dropdown-item border-bottom border-main py-3"
                   href="https://html.code4rest.com/HTML/18_Doartist/team.html"
-                  >Our team</a
+                  >진주/자개비즈</a
                 >
               </li>
               <li>
                 <a
                   class="dropdown-item border-bottom border-main py-3"
                   href="https://html.code4rest.com/HTML/18_Doartist/price.html"
-                  >Pricing plan</a
+                  >925실버비즈</a
                 >
               </li>
               <li>
                 <a
                   class="dropdown-item border-bottom border-main py-3"
                   href="https://html.code4rest.com/HTML/18_Doartist/faq.html"
-                  >Faq</a
+                  >시드비즈</a
                 >
               </li>
               <li>
                 <a
                   class="dropdown-item border-bottom border-main py-3"
                   href="https://html.code4rest.com/HTML/18_Doartist/error.html"
-                  >404 error</a
+                  >펜던트류</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item border-bottom border-main py-3"
+                  href="https://html.code4rest.com/HTML/18_Doartist/error.html"
+                  >끈류</a
                 >
               </li>
             </ul>
@@ -329,19 +329,13 @@
             class="nav-link active py-3 border-bottom border-main"
             aria-current="page"
             href="https://html.code4rest.com/HTML/18_Doartist/about.html"
-            >About</a
+            >장바구니</a
           >
           <a
             class="nav-link active py-3 border-bottom border-main"
             aria-current="page"
             href="https://html.code4rest.com/HTML/18_Doartist/blog.html"
-            >Blog</a
-          >
-          <a
-            class="nav-link active py-3 border-bottom border-main"
-            aria-current="page"
-            href="https://html.code4rest.com/HTML/18_Doartist/contact.html"
-            >Contact</a
+            >고객센터</a
           >
         </div>
       </div>
@@ -350,7 +344,6 @@
     <!-- banner -->
 
     <section class="banner">
-
       <!-- 이미지 슬라이드 -->
       <div class="owl-carousel owl-theme owl-carousel-hero">
         <div class="item">
@@ -374,8 +367,12 @@
 
       <!-- 좌우 버튼 (슬라이드 X) -->
       <div class="banner-controls" aria-label="banner controls">
-        <button type="button" class="banner-prev" aria-label="Prev"><i class="fa-solid fa-chevron-left"></i></button>
-        <button type="button" class="banner-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        <button type="button" class="banner-prev" aria-label="Prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button type="button" class="banner-next" aria-label="Next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
     </section>
 
@@ -384,11 +381,8 @@
     <section class="showcase bg-main text-white all-padding">
       <div class="container">
         <div class="text-up text-center wow bounceIn">
-          <h3 class="text-uppercase text-white">Our SHOWCASE</h3>
-          <p>
-            Lorem ipsum dolor sit amet, putant oblique nostrum vel at, his ea
-            nominavi invenire accommodare, at nec numquam.
-          </p>
+          <h3 class="text-uppercase text-white">BEST ITEM🔥</h3>
+          <p>한 주 동안 많은 사랑을 받은 아이템들을 한 번에 확인하세요!</p>
         </div>
         <div class="row">
           <div class="col-3 wow fadeInUp">

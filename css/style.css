@@ -199,6 +199,10 @@ header.sticky .navbar .nav-item .dropdown .btn {
   color: var(--white-color);
 }
 
+.navbar a:active {
+  color: var(--black-color);
+}
+
 .navbar .logo img {
   max-width: 185px;
   height: 100%;
@@ -216,13 +220,15 @@ header.sticky .navbar .nav-item .dropdown .btn {
 
 .navbar .dropdown:hover .dropdown-menu {
   display: block;
+  opacity: 85%;
 }
 
 .navbar .dropdown-menu {
   background-color: var(--black-color);
   color: var(--white-color);
   width: 200px;
-  height: 270px;
+  /* max-height: 270px;
+  overflow-y: auto; */
   position: absolute;
   top: 100%;
 }
@@ -232,8 +238,8 @@ header.sticky .navbar .nav-item .dropdown .btn {
 }
 
 .navbar .dropdown-menu li .dropdown-item:hover {
-  background-color: var(--black-color);
-  color: var(--white-color);
+  background-color: var(--white-color);
+  color: var(--black-color);
 }
 
 .navbar .dropdown-menu .dropdown-item {
@@ -267,7 +273,7 @@ header.sticky .navbar .nav-item .dropdown .btn {
 
 .modal-content {
   background-color: var(--black-color);
-  opacity: 98%;
+  opacity: 97%;
 }
 
 .modal-backdrop {
@@ -276,8 +282,13 @@ header.sticky .navbar .nav-item .dropdown .btn {
 }
 
 .modal-header .btn-close {
-  background-image: url("../img/close.png");
+  background-image: url("../image/x-lg.svg");
   padding: 20px !important;
+  background-color: transparent !important; /* 배경 투명 */
+  filter: invert(1) brightness(200%); /* 검은색을 흰색으로 반전 */
+  background-size: 1.5rem; /* 크기 조절 */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .btn-close {
@@ -353,7 +364,11 @@ header.sticky .navbar .nav-item .dropdown .btn {
 /* banner */
 
 /* 배너 기준 */
-.banner { position: relative; overflow: hidden; z-index: 0; }
+.banner {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
 
 /* 이미지는 아래 레이어 */
 .banner .owl-carousel-hero,
@@ -369,35 +384,43 @@ header.sticky .navbar .nav-item .dropdown .btn {
 .slider-img,
 .banner .owl-item img {
   width: 100%;
-  height: 80vh;            /* 필요하면 70vh/900px */
+  height: 80vh; /* 필요하면 70vh/900px */
   object-fit: cover;
   display: block;
 }
 
 /* 중앙 고정 텍스트 */
 .banner .banner-overlay {
-  position: absolute; inset: 0;
-  display: grid; place-items: center;   /* 가로+세로 중앙 */
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center; /* 가로+세로 중앙 */
   text-align: center;
-  z-index: 2001;                        /* 항상 위 */
-  pointer-events: none;                 /* 클릭 방해 X */
+  z-index: 2001; /* 항상 위 */
+  pointer-events: none; /* 클릭 방해 X */
 }
 .banner .banner-overlay h2 {
-  margin: 0; color: #fff; font-weight: 800;
+  margin: 0;
+  color: #fff;
+  font-weight: 800;
   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1.1;
-  text-shadow: 2px 2px 10px rgba(0,0,0,.6);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
 }
 
 /* 좌/우 버튼: 세로 중앙, 가로 양끝 */
 .banner .banner-controls {
-  position: absolute; left: 0; right: 0; top: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
   transform: translateY(-50%);
-  display: flex; justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   padding: 0 1rem;
-  z-index: 2002;                        /* 텍스트보다 위 */
-  pointer-events: none;                 /* 컨테이너는 막고 */
+  z-index: 2002; /* 텍스트보다 위 */
+  pointer-events: none; /* 컨테이너는 막고 */
 }
 /* 공통 버튼 스타일 */
 .banner .banner-controls button {
@@ -406,9 +429,9 @@ header.sticky .navbar .nav-item .dropdown .btn {
   height: 48px;
   border: none;
   border-radius: 50%;
-  background: transparent;         /* 완전 투명 배경 */
+  background: transparent; /* 완전 투명 배경 */
   color: rgba(255, 255, 255, 0.8); /* 은은한 흰색 아이콘 */
-  font-size: 28px;                 /* 아이콘 크기 */
+  font-size: 28px; /* 아이콘 크기 */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -428,29 +451,42 @@ header.sticky .navbar .nav-item .dropdown .btn {
 }
 
 /* 헤더가 fixed/sticky면 보통 z-index가 1000대 — 버튼/텍스트가 더 위 */
-header { position: sticky; z-index: 1000; }
+header {
+  position: sticky;
+  z-index: 1000;
+}
 
 @media (max-width: 576px) {
-  .banner .owl-item img { height: 60vh; }
-  .banner .banner-controls { padding: 0 .5rem; }
-  .banner .banner-controls button { width: 40px; height: 40px; font-size: 18px; }
+  .banner .owl-item img {
+    height: 60vh;
+  }
+  .banner .banner-controls {
+    padding: 0 0.5rem;
+  }
+  .banner .banner-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
 }
 
 /* 배너 기준 레이어 */
-.banner { position: relative; }
+.banner {
+  position: relative;
+}
 
 /* ▽▽ Dots: 바(Bar) 스타일 + 이미지 위에 고정 ▽▽ */
 .banner .owl-dots {
   position: absolute;
   left: 50%;
-  bottom: 20px;                /* 위치 원하는 만큼 조절 */
+  bottom: 20px; /* 위치 원하는 만큼 조절 */
   transform: translateX(-50%);
-  z-index: 2001;               /* 이미지(1)보다 위, 버튼(2002)보다 아래여도 OK */
+  z-index: 2001; /* 이미지(1)보다 위, 버튼(2002)보다 아래여도 OK */
   display: flex;
   gap: 8px;
   padding: 0;
-  background: transparent !important;  /* 투명 배경 */
-  pointer-events: auto;        /* 클릭 가능 */
+  background: transparent !important; /* 투명 배경 */
+  pointer-events: auto; /* 클릭 가능 */
 }
 
 /* 버튼 리셋 + 투명 배경 */
@@ -465,31 +501,35 @@ header { position: sticky; z-index: 1000; }
 /* 점을 '바'로 보이게 */
 .banner .owl-dots .owl-dot span {
   display: block;
-  width: 20px;                 /* bar 길이 */
-  height: 5px;                 /* bar 두께 */
-  background: rgba(0, 0, 0, 0.308);  /* 비활성: 옅은 흰색 */
-  border-radius: 5px;          /* 살짝 둥글게 */
-  transition: transform .25s ease, background .25s ease;
+  width: 20px; /* bar 길이 */
+  height: 5px; /* bar 두께 */
+  background: rgba(0, 0, 0, 0.308); /* 비활성: 옅은 흰색 */
+  border-radius: 5px; /* 살짝 둥글게 */
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
 /* 활성화된 bar 강조 */
 .banner .owl-dots .owl-dot.active span {
-  background: #fff;            /* 활성: 선명한 흰색 */
-  transform: scaleX(1.08);     /* 살짝 길어지는 느낌 */
+  background: #fff; /* 활성: 선명한 흰색 */
+  transform: scaleX(1.08); /* 살짝 길어지는 느낌 */
 }
 
 /* hover 시 조금 더 진하게 */
 .banner .owl-dots .owl-dot:hover span {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 /* 모바일에서 살짝 작게 */
 @media (max-width: 576px) {
-  .banner .owl-dots { bottom: 14px; gap: 3px; }
-  .banner .owl-dots .owl-dot span { width: 28px; height: 3px; }
+  .banner .owl-dots {
+    bottom: 14px;
+    gap: 3px;
+  }
+  .banner .owl-dots .owl-dot span {
+    width: 28px;
+    height: 3px;
+  }
 }
-
-
 
 /* showcase */
 
