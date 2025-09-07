@@ -299,8 +299,13 @@ header.sticky .navbar .nav-item .dropdown .btn {
 /* offcanvas */
 
 .offcanvas .btn-close {
-  background-image: url("../img/close.png");
-  height: 2em;
+  background-image: url("../image/x-lg.svg");
+  padding: 20px 0px !important;
+  background-color: transparent !important; /* 배경 투명 */
+  filter: invert(1) brightness(200%); /* 검은색을 흰색으로 반전 */
+  background-size: 1.5rem; /* 크기 조절 */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .offcanvas .btn {
@@ -721,7 +726,8 @@ header {
 /* inner-page-top */
 
 .top-img {
-  background-image: url("../img/bred.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    /* 어둡게 덮는 레이어 */ url("../image/biz-4.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -827,6 +833,78 @@ header {
   .gallery .gallery-filter .filter-item {
     margin-bottom: 10px;
   }
+}
+
+/* 검정 오버레이 */
+.black-box {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  display: flex; /* 글자 가운데 정렬 */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 2;
+}
+
+/* hover 시 나타남 */
+.inner-img:hover .black-box {
+  opacity: 1;
+}
+
+.icon-pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 8rem; /* footer와의 거리 넉넉히 */
+}
+
+.icon-pagination .icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icon-pagination .icon-btn:hover {
+  transform: scale(1.3);
+  color: #000;
+}
+
+/* 페이지 번호 */
+.page-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.8rem;
+}
+
+.page-list li {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.page-list li:hover {
+  transform: scale(1.3);
+}
+
+/* 현재 페이지(active) 스타일 */
+.page-list li.active {
+  font-weight: 700;
+  color: #000;
+  border-bottom: 2px solid #000; /* 밑줄 표시 */
+  padding-bottom: 2px; /* 밑줄과 글자 간격 */
 }
 
 /* team-page----------------------------------------- */
