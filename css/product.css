@@ -351,6 +351,25 @@ body {
   border-radius: 6px;
 }
 
+/* 숫자 input 기본 화살표 제거 */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* 탭 기본/활성 표시 */
+.panel{ display:none; }
+.panel.active{ display:block; }
+
+.tab-link{ border-bottom:2px solid transparent; }
+.tab-link.active{ border-color: var(--brand); font-weight:700; color:#111827; }
+
+
+
 /* 반응형 */
 @media (max-width: 980px) {
   .product {

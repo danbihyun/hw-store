@@ -43,6 +43,36 @@
   setActive(0, "right");
 })();
 
+document.addEventListener('DOMContentLoaded', () => {
+  const links  = Array.from(document.querySelectorAll('.tab-link'));
+  const panels = Array.from(document.querySelectorAll('.panel'));
+
+  function showTab(id){ // id: "tab-detail" 같은 것
+    links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#'+id));
+    panels.forEach(p => p.classList.toggle('active', p.id === id));
+  }
+
+  // 클릭 시 전환 (해시 사용/미사용 모두 지원)
+  links.forEach(l => {
+    l.addEventListener('click', (e) => {
+      e.preventDefault();                           // 기본 앵커 이동 막기
+      const id = l.getAttribute('href').slice(1);   // "#tab-qa" -> "tab-qa"
+      history.replaceState(null, '', '#'+id);       // URL 해시 업데이트(옵션)
+      showTab(id);
+    });
+  });
+
+  // 뒤로가기 등 해시 변화 대응
+  window.addEventListener('hashchange', () => {
+    const id = (location.hash || '#tab-detail').slice(1);
+    showTab(id);
+  });
+
+  // 초기 활성 탭
+  showTab((location.hash || '#tab-detail').slice(1));
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const qtyInput = document.getElementById("qty");
   const payTotal = document.getElementById("payTotal");
