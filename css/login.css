@@ -1,13 +1,13 @@
 :root{
-  --bg: #0f172a;         /* slate-900 */
+  --bg: #131313;     
   --card: #ffffff;
-  --text: #0f172a;
-  --muted: #6b7280;      /* gray-500 */
-  --primary: #6750a4;    /* berry 느낌의 보라톤 */
-  --primary-600:#5a4696;
-  --ring: rgba(103,80,164,0.35);
+  --text: #131313;
+  --muted: #6b7280;    
+  --primary: #000000;   
+  --primary-600:#000000;
+  --ring: rgba(40, 37, 48, 0.35);
   --border: #e5e7eb;
-  --shadow: 0 10px 30px rgba(2,6,23,.15);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   --radius: 16px;
 }
 
@@ -18,8 +18,8 @@ body.login-body{
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(1200px 500px at 10% -10%, rgba(103,80,164,.25), transparent 60%),
-    radial-gradient(1200px 600px at 110% 110%, rgba(103,80,164,.18), transparent 60%),
+    radial-gradient(1200px 500px at 10% -10%, rgba(36, 36, 36, 0.25), transparent 60%),
+    radial-gradient(1200px 600px at 110% 110%, rgba(17, 17, 17, 0.18), transparent 60%),
     var(--bg);
 }
 
@@ -148,6 +148,98 @@ body.login-body{
 .btn-social:hover{
   border-color:#d1d5db; box-shadow: 0 6px 16px rgba(2,6,23,.08);
 }
+
+/* 공통 스타일 */
+.btn-social {
+  width: 100%;
+  max-width: 320px;  /* 버튼 최대 너비 */
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.btn-social:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* NAVER 버튼 */
+.btn-naver {
+  background: #03c75a;
+  border-color: #03c75a;
+  box-shadow: 0 8px 18px rgba(3,199,90,.25);
+}
+.btn-naver:hover {
+  background: #02b350;
+}
+.btn-naver:active {
+  transform: translateY(1px);
+}
+
+/* GOOGLE 버튼 */
+.btn-google {
+  background: #4285f4;
+  border-color: #4285f4;
+  box-shadow: 0 8px 18px rgba(66,133,244,.25);
+}
+.btn-google:hover {
+  background: #3367d6;
+}
+.btn-google:active {
+  transform: translateY(1px);
+}
+
+/* 네이버 N 아이콘 색상 */
+.btn-naver i {
+  color: #fff;
+  font-weight: 900;
+  font-style: normal; /* 기본 italic 방지 */
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* 구글 아이콘은 Font Awesome 기본 컬러가 있음 → 흰색으로 덮어줌 */
+.btn-google i {
+  color: #fff;
+  font-size: 20px;
+}
+
+
+
+
+
+.btn-guest {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  margin-top: 10px;
+  border: 1px solid var(--border);
+  background: #f9fafb; /* 밝은 회색 */
+  color: var(--text);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background .15s ease, transform .02s ease, box-shadow .15s ease;
+}
+.btn-guest:hover {
+  background: #f3f4f6;
+  box-shadow: 0 6px 14px rgba(2,6,23,.08);
+}
+.btn-guest:active {
+  transform: translateY(1px);
+}
+
 
 /* 푸터 텍스트 */
 .terms{
