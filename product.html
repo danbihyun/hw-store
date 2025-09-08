@@ -404,7 +404,7 @@
                 </div>
             </div>
         </div>
-        </div>
+
 
         <!-- 결제 금액 -->
         <div class="pay-row">
@@ -412,7 +412,7 @@
           <span class="total"><b id="payTotal">400</b> 원</span>
         </div>
 
-        <!-- CTA 3종 -->
+        <!-- CTA -->
         <div class="cta">
           <button class="btn outline" type="button">장바구니 담기</button>
           <button class="btn primary" type="button">구매하기</button>
@@ -424,13 +424,13 @@
     <section class="tabs container">
       <div class="tab-headers">
         <a href="#tab-detail" class="tab-link active">상세정보</a>
-        <a href="#tab-reviews" class="tab-link">리뷰(32)</a>
+        <a href="#tab-reviews" class="tab-link">리뷰(0)</a>
         <a href="#tab-qa" class="tab-link">Q&A</a>
       </div>
 
       <div class="tab-panels">
         <article id="tab-detail" class="panel active">
-          <img src="image/detail-1.jpg" class="detail-image" alt="상세 이미지">
+          <img src="image/showcase-9-1.jpg" class="detail-image" alt="상세 이미지">
         </article>
         <article id="tab-reviews" class="panel"><p>리뷰 준비중…</p></article>
         <article id="tab-qa" class="panel"><p>문의 준비중…</p></article>
@@ -438,32 +438,25 @@
     </section>
   </main>
 
-  <script>
-    // 썸네일 교체
-    const thumbs = document.querySelectorAll('.thumbs img');
-    const mainImg = document.getElementById('mainImage');
-    let idx = 0;
-    function setActive(i){
-      thumbs.forEach(t=>t.classList.remove('active'));
-      thumbs[i].classList.add('active');
-      mainImg.src = thumbs[i].dataset.target;
-      idx = i;
-    }
-    thumbs.forEach((t,i)=> t.addEventListener('click', ()=> setActive(i)));
+    <!-- all -->
+    <script src="https://html.code4rest.com/HTML/18_Doartist/js/jquery.min.js"></script>
 
-    // 좌우 네비
-    document.querySelector('.prev')?.addEventListener('click', ()=> setActive((idx - 1 + thumbs.length) % thumbs.length));
-    document.querySelector('.next')?.addEventListener('click', ()=> setActive((idx + 1) % thumbs.length));
+    <!-- glightbox -->
+    <script src="https://html.code4rest.com/HTML/18_Doartist/js/glightbox.js"></script>
 
-    // 탭
-    const links = document.querySelectorAll('.tab-link');
-    const panels = document.querySelectorAll('.panel');
-    function activate(hash){
-      links.forEach(l=>l.classList.toggle('active', l.getAttribute('href')===hash));
-      panels.forEach(p=>p.classList.toggle('active', '#'+p.id===hash));
-    }
-    window.addEventListener('hashchange', ()=>activate(location.hash||'#tab-detail'));
-    activate(location.hash||'#tab-detail');
-  </script>
+    <!-- owl-carousel -->
+    <script src="https://html.code4rest.com/HTML/18_Doartist/js/owl.carousel.min.js"></script>
+
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://html.code4rest.com/HTML/18_Doartist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- swiper-js -->
+    <script src="https://html.code4rest.com/HTML/18_Doartist/js/swiper.js"></script>
+
+    <!-- custom -->
+    <script src="js/product.js"></script>
 </body>
 </html>
