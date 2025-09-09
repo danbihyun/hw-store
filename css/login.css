@@ -59,17 +59,17 @@ body.login-body {
 .auth-aside {
   padding: 48px 40px;
   background: linear-gradient(
-      180deg,
-      rgba(103, 80, 164, 0.08),
-      rgba(103, 80, 164, 0.02)
+      rgba(255, 255, 255, 0.85),
+      /* 밝은 투명 레이어 */ rgba(255, 255, 255, 0.85)
     ),
-    #fafafa;
+    url("image/biz-7.jpg") no-repeat center/cover; /* 배경 이미지 */
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 18px;
   justify-content: center;
 }
+
 .brand {
   display: flex;
   align-items: center;

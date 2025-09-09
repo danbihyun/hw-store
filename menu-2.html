@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,11 +29,11 @@
     <!-- Owl Carousel -->
     <link
       rel="stylesheet"
-      href="https://html.code4rest.com/HTML/18_Doartist/css/owl.carousel.min.css"
+      href="css/OwlCarousel2/dist/assets/owl.carousel.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://html.code4rest.com/HTML/18_Doartist/css/owl.theme.default.min.css"
+      href="css/OwlCarousel2/dist/assets/owl.theme.default.min.css"
     />
 
     <!-- Glightbox -->
@@ -56,11 +54,8 @@
       href="https://html.code4rest.com/HTML/18_Doartist/css/media.css"
     />
 
-    <!-- 사용자 정의 CSS 1 -->
+    <!-- 사용자 정의 CSS -->
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- 사용자 정의 CSS 2 -->
-    <link rel="stylesheet" href="css/product.css" />
   </head>
 
   <body>
@@ -72,19 +67,14 @@
       <nav class="navbar navbar-main navbar-expand-lg p-0">
         <div class="container-fluid">
           <div class="col-2">
-            <a
-              href="index.html"
-              class="logo d-flex justify-content-start"
-            >
+            <a href="index.html" class="logo d-flex justify-content-start">
               <img src="image/logo-2.png" alt="" />
             </a>
           </div>
           <div class="col-10 d-flex justify-content-end">
             <ul class="navbar-nav text-uppercase">
               <li class="nav-item pe-4 d-flex align-items-center">
-                <a aria-current="page" href="login.html"
-                  >로그인/회원가입</a
-                >
+                <a aria-current="page" href="login.html">로그인/회원가입</a>
               </li>
               <li class="nav-item d-flex align-items-center">
                 <div class="dropdown">
@@ -124,18 +114,10 @@
                 </div>
               </li>
               <li class="nav-item px-4 d-flex align-items-center">
-                <a
-                  aria-current="page"
-                  href="menu-1.html"
-                  >장바구니</a
-                >
+                <a aria-current="page" href="menu-1.html">장바구니</a>
               </li>
               <li class="nav-item px-4 d-flex align-items-center">
-                <a
-                  aria-current="page"
-                  href="menu-1.html"
-                  >고객센터</a
-                >
+                <a aria-current="page" href="menu-1.html">고객센터</a>
               </li>
             </ul>
 
@@ -153,7 +135,7 @@
       </nav>
     </header>
 
-        <!-- Modal -->
+    <!-- Modal -->
     <div
       class="modal fade"
       id="staticBackdrop"
@@ -192,6 +174,7 @@
     </div>
 
     <!-- header-responsive -->
+
     <header>
       <nav class="navbar navbar-responsive navbar-expand-lg p-0">
         <div class="container">
@@ -323,119 +306,268 @@
     </header>
 
     <!-- main -->
-    <main>
-     <section class="top top-img wow fadeIn" data-wow-duration="1s">
-        <div class="top-text">
-            <div class="text-inner">
-                <h2 class="text-uppercase text-white mt-0">아크릴비즈</h2>
-                    <div class="d-flex text-white justify-content-center">
-                        <a href="index.html"><i class="fa-solid fa-house"></i></a>
-                        <p class="mb-0"><span class="mx-1">/</span>아크릴비즈</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
-
-    <!-- 브레드크럼 -->
-    <nav class="breadcrumb container">
-      <a href="index.html">홈</a>
-      <span>/</span>
-      <a href="menu-1.html">아크릴비즈</a>
-      <span>/</span>
-      <span class="current">통과형 진주통통나비</span>
-    </nav>
-
-    <section class="product container">
-      <!-- 갤러리 -->
-      <div class="gallery">
-        <div class="preview">
-          <button class="nav prev" aria-label="이전"><i class="fa-solid fa-chevron-left"></i></button>
-          <img id="mainImage" src="image/showcase-9.jpg" alt="통과형 진주통통나비" />
-          <button class="nav next" aria-label="다음"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
-
-        <div class="thumbs">
-          <img src="image/showcase-9.jpg" data-target="image/showcase-9.jpg" class="active" alt="thumb1" />
-          <img src="image/showcase-9.jpg" data-target="image/showcase-9.jpg" alt="thumb2" />
-          <img src="image/showcase-9.jpg" data-target="image/showcase-9.jpg" alt="thumb3" />
-          <img src="image/showcase-9.jpg" data-target="image/showcase-9.jpg" alt="thumb4" />
-          <img src="image/showcase-9.jpg" data-target="image/showcase-9.jpg" alt="thumb5" />
-        </div>
-      </div>
-
-      <!-- 정보영역 -->
-      <aside class="info">
-        <!-- 칩 -->
-        <div class="chips">
-          <span class="chip">아크릴</span>
-          <span class="chip">통과형 비즈</span>
-        </div>
-
-        <!-- 타이틀/가격 -->
-        <h1 class="title">통과형 진주통통나비</h1>
-
-        <div class="price-row">
-          <div class="price">
-            <strong class="num">400</strong>
-            <span class="unit">원</span>
+    <section class="top top-img wow fadeIn" data-wow-duration="1s">
+      <div class="top-text">
+        <div class="text-inner">
+          <h2 class="text-uppercase text-white mt-0">아크릴비즈</h2>
+          <div class="d-flex text-white justify-content-center">
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
+            <p class="mb-0"><span class="mx-1">/</span>아크릴비즈</p>
           </div>
         </div>
-
-        <!-- 옵션 행 (좌: 라벨/셀렉트, 우: 수량 선택) -->
-        <div class="option-row">
-            <div class="left">
-                <label for="optionMain">옵션 선택</label>
-                <div class="select-wrap">
-                <select id="optionMain">
-                    <option value="" selected>16.5x12mm 화이트</option>
-                </select>
-                </div>
-            </div>
-
-            <div class="right" style="margin-top:10px">
-                <label for="qty">수량</label>
-                <div class="qty-box">
-                <button type="button" class="minus" aria-label="수량 감소">−</button>
-                <input type="number" id="qty" value="1" min="1" />
-                <button type="button" class="plus" aria-label="수량 증가">＋</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- 결제 금액 -->
-        <div class="pay-row">
-          <span class="label">결제 금액</span>
-          <span class="total"><b id="payTotal">400</b> 원</span>
-        </div>
-
-        <!-- CTA -->
-        <div class="cta">
-          <button class="btn outline" type="button">장바구니 담기</button>
-          <button class="btn primary" type="button">구매하기</button>
-        </div>
-      </aside>
-    </section>
-
-    <!-- 하단 탭 (선택) -->
-    <section class="tabs container">
-      <div class="tab-headers">
-        <a href="#tab-detail" class="tab-link active">상세정보</a>
-        <a href="#tab-reviews" class="tab-link">리뷰(0)</a>
-        <a href="#tab-qa" class="tab-link">Q&A</a>
-      </div>
-
-      <div class="tab-panels">
-        <article id="tab-detail" class="panel active">
-          <img src="image/showcase-9-1.jpg" class="detail-image" alt="상세 이미지">
-        </article>
-        <article id="tab-reviews" class="panel"><p>리뷰 준비중…</p></article>
-        <article id="tab-qa" class="panel"><p>문의 준비중…</p></article>
       </div>
     </section>
-  </main>
+
+    <!-- gallery-page -->
+
+    <section class="gallery all-padding">
+      <div class="container">
+        <div class="row">
+          <!-- start -->
+          <!-- 1 -->
+          <div
+            class="gallery-item illusion wings wow bounceIn"
+            data-wow-duration="3s"
+          >
+            <div class="img">
+              <div class="inner-img">
+                <a href="product.html">
+                  <img
+                    src="image/showcase-9.jpg"
+                    alt=""
+                    class="object-fit-cover"
+                  />
+                  <div class="black-box">
+                    <span class="caption">
+                      통과형 진주통통나비<br />
+                      16.5x12mm 화이트, 1개
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div
+            class="gallery-item illusion events wow bounceIn"
+            data-wow-duration="3s"
+          >
+            <div class="img">
+              <div class="inner-img">
+                <a href="image/showcase-10.jpg" class="glightbox">
+                  <img
+                    src="image/showcase-10.jpg"
+                    alt=""
+                    class="object-fit-cover"
+                  />
+                  <div class="black-box">
+                    <span class="caption">
+                      통과형 진주천사날개<br />
+                      17.5x7.5mm 화이트, 1개
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div
+            class="gallery-item illusion wings wow bounceIn"
+            data-wow-duration="3s"
+          >
+            <div class="img">
+              <div class="inner-img">
+                <a href="image/acrylic-1.jpg" class="glightbox">
+                  <img
+                    src="image/acrylic-1.jpg"
+                    alt=""
+                    class="object-fit-cover"
+                  />
+                  <div class="black-box">
+                    <span class="caption">
+                      통과형 과일 3종<br />
+                      체리 / 복숭아 / 딸기, 1개
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div
+            class="gallery-item illusion events wow bounceIn"
+            data-wow-duration="3s"
+          >
+            <div class="img">
+              <div class="inner-img">
+                <a href="image/acrylic-2.jpg" class="glightbox">
+                  <img
+                    src="image/acrylic-2.jpg"
+                    alt=""
+                    class="object-fit-cover"
+                  />
+                  <div class="black-box">
+                    <span class="caption">
+                      통과형 캣츠링<br />
+                      25mm ,1개
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div
+            class="gallery-item illusion wings wow bounceIn"
+            data-wow-duration="3s"
+          >
+            <div class="img">
+              <div class="inner-img">
+                <a href="image/acrylic-3.jpg" class="glightbox">
+                  <img
+                    src="image/acrylic-3.jpg"
+                    alt=""
+                    class="object-fit-cover"
+                  />
+                  <div class="black-box">
+                    <span class="caption">
+                      미니어처 과일모형 미니귤조각<br />
+                      7.5x12mm ,1개
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div
+            class="gallery-item illusion events wow bounceIn"
+            data-wow-duration="3s"
+          >
+            <div class="img">
+              <div class="inner-img">
+                <a href="image/acrylic-4.jpg" class="glightbox">
+                  <img
+                    src="image/acrylic-4.jpg"
+                    alt=""
+                    class="object-fit-cover"
+                  />
+                  <div class="black-box">
+                    <span class="caption">
+                      통과형 오로라불가사리<br />
+                      16mm ,10개
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 7 -->
+          <div
+            class="gallery-item events wings wow bounceIn"
+            data-wow-duration="3s"
+          >
+            <div class="img">
+              <div class="inner-img">
+                <a href="image/showcase-6.jpg" class="glightbox">
+                  <img
+                    src="image/showcase-6.jpg"
+                    alt=""
+                    class="object-fit-cover"
+                  />
+                  <div class="black-box">
+                    <span>
+                      전통매듭 동양풍 야광노리개<br />
+                      40mm ,1개
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 8 -->
+          <div
+            class="gallery-item events wings wow bounceIn"
+            data-wow-duration="3s"
+          >
+            <div class="img">
+              <div class="inner-img">
+                <a href="image/acrylic-6.jpg" class="glightbox">
+                  <img
+                    src="image/acrylic-6.jpg"
+                    alt=""
+                    class="object-fit-cover"
+                  />
+                  <div class="black-box">
+                    <span>
+                      통과형 캔디수박<br />
+                      20x26mm ,1개
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 9 -->
+          <div class="gallery-item wings wow bounceIn" data-wow-duration="3s">
+            <div class="img">
+              <div class="inner-img">
+                <a href="image/acrylic-7.jpg" class="glightbox">
+                  <img
+                    src="image/acrylic-7.jpg"
+                    alt=""
+                    class="object-fit-cover"
+                  />
+                  <div class="black-box">
+                    <span>통과형 오로라 하트 별, 1개</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="icon-pagination d-flex justify-content-center mt-5">
+      <!-- 이전 버튼 -->
+      <button class="icon-btn" aria-label="Previous">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <!-- 페이지 번호 -->
+      <ul class="page-list">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+
+      <!-- 다음 버튼 -->
+      <button class="icon-btn" aria-label="Next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- footer -->
+
+    <section class="footer bg-main">
+      <div class="container">
+        <div class="row border-top border-main footer-end">
+          <div class="col-12 d-flex justify-content-center py-2 text-white">
+            <p class="mb-0 py-3">© 2025 - Html Theme by Code4rest</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fix-btn">
+        <a href="#" class="btn bg-main position-fixed rounded-0 text-white">
+          <i class="bi bi-chevron-up"></i>
+        </a>
+      </div>
+    </section>
 
     <!-- all -->
     <script src="https://html.code4rest.com/HTML/18_Doartist/js/jquery.min.js"></script>
@@ -456,6 +588,15 @@
     <script src="https://html.code4rest.com/HTML/18_Doartist/js/swiper.js"></script>
 
     <!-- custom -->
-    <script src="js/product.js"></script>
-</body>
+    <script src="js/custom.js"></script>
+
+    <script>
+      //GLightbox
+
+      var lightbox = GLightbox();
+      lightbox.on("open", (target) => {
+        console.log("lightbox opened");
+      });
+    </script>
+  </body>
 </html>
