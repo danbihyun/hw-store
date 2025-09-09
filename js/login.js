@@ -214,3 +214,13 @@ document.querySelector(".btn-naver")?.addEventListener("click", () => {
     setTimeout(() => (location.href = "index.html"), 700);
   }
 });
+
+// ===== 데모 계정 자동 입력 =====
+window.addEventListener("DOMContentLoaded", () => {
+  const emailEl = document.getElementById("email");
+  const pwEl = document.getElementById("password");
+  if (emailEl && pwEl) {
+    emailEl.value = "demo@demo.com";
+    pwEl.value = "1234";
+  }
+});
