@@ -907,344 +907,58 @@ header {
   padding-bottom: 2px; /* 밑줄과 글자 간격 */
 }
 
-/* team-page----------------------------------------- */
+/* menu page */
 
-.team-page .col-3 {
-  padding: 0;
-  position: relative;
+/* 3열 그리드 (반응형은 아래 미디어쿼리 참고) */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
 }
 
-.team-page .box {
+/* 카드 박스가 꽉 차도록 레이아웃 보정 */
+.products-grid .gallery-item,
+.products-grid .img,
+.products-grid .inner-img,
+.products-grid .inner-img a {
   width: 100%;
-  height: 156px;
-  position: absolute;
-  bottom: -25%;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
+  height: 100%;
+  display: block;
 }
 
-.team-page .img-box:hover .box {
-  bottom: 0%;
-  opacity: 1;
-}
-
-.team-page .img-box {
+/* 정사각형 카드 + 라운드 + 오버플로우 숨김 */
+.products-grid .img {
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
   overflow: hidden;
 }
 
-.team-page .img-box a {
-  transition: all 0.3s ease-in-out;
-}
-
-.team-page .img-box a:hover {
-  transform: translateY(-8px);
-}
-
-/* price-page----------------------------------------- */
-
-.price-page span {
-  border-top: 2px dotted var(--border-contact);
-  transform: translatey(1rem);
-  margin: 0 0.3rem;
-  flex-grow: 1;
-}
-
-.price-page .d-flex {
-  justify-content: space-between;
-}
-
-.price-page p {
-  margin-bottom: 30px;
-}
-
-/* error-page----------------------------------------- */
-
-.error-page {
-  width: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-image: url("../img/404.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.fix-part {
-  text-align: center;
-}
-
-.error-page h2 {
-  font-size: 340px;
-  line-height: 272px;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.error-page h3 {
-  font-weight: 500;
-}
-
-.error.fix-part .btn {
-  width: 187px;
-  height: 44px;
-  font-weight: 400;
-}
-
-/* about-page----------------------------------------- */
-
-.about-page h4 {
-  font-weight: 600;
-}
-
-.about-page .col-4 .img {
-  width: 185px;
-  height: 185px;
-  margin-bottom: 1.5rem;
-}
-
-.about-page .col-4 .img1 {
-  transform: translateX(2rem);
-}
-
-.about-page .col-4 .img2 {
-  transform: translatey(2rem);
-  position: relative;
-  left: 27.5%;
-}
-
-.about-page .col-4 .img3 {
-  transform: translateX(6rem);
-}
-
-.about-page .col-4 .img4 {
-  transform: translateX(2rem);
-}
-
-.about-page .col-4 .img5,
-.about-page .col-4 .img6 {
-  transform: translateX(7rem);
-}
-
-.img-section2 .count {
-  font-size: 40px;
-  line-height: 50px;
-  font-weight: 600;
-}
-
-/* blog-page----------------------------------------- */
-
-.blog-page .container {
-  max-width: 1348px !important;
-  padding: 0 1.5rem;
-}
-
-.blog-page .blog-sec input {
-  height: 44px;
-  outline: none;
-}
-
-.blog-page form button {
-  width: 50px;
-  height: 44px;
-}
-
-.blog-page .blog-sec .col-3 {
-  width: 22.1%;
-}
-
-.blog-sec .img .inner-img img {
-  height: 75px;
+/* 이미지가 카드에 꽉 차게 */
+.products-grid .inner-img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.blog-page .col-8 .img .inner-img img {
-  height: 212px;
-}
-
-.blog-page h4 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 4.7rem;
-}
-
-/* blog-inner-page */
-
-.blog-inner .blog-img {
-  position: relative;
-}
-
-.blog-inner .blog-img img {
-  height: 650px;
-}
-
-.blog-inner .rounded-circle {
-  max-width: 100%;
-  height: 25px;
-  width: 25px;
-}
-
-.blog-top .container {
-  background: #fff;
-  transform: translateY(-70px);
-  padding: 2rem;
-}
-
-.blog-inner h2 {
-  font-size: 50px;
-  line-height: 60px;
-  font-weight: 600;
-  letter-spacing: 0;
-  text-align: start;
-  margin-bottom: 1.5rem;
-}
-
-.blog-inner .uncategorized-btn {
-  width: auto;
-  font-size: 11.9px;
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  padding: 0.25rem;
-  margin: 0 13px 22px;
-  border-radius: 0.25rem;
-}
-
-.blog-inner .part {
-  font-size: 15px;
-  line-height: 25px;
-}
-
-.blog-inner span {
-  font-size: 15px;
-  line-height: 25px;
-  position: relative;
-  padding-inline: 4px;
-}
-
-.blog-inner p span::before {
-  content: "|";
-  margin: 0 0.5rem;
-}
-
-.blog-inner span::after {
-  content: "|";
-  margin: 0 0.5rem;
-}
-
-.blog-inner .un-btn {
-  display: flex;
-  transform: translatex(-5px);
-}
-
-.blog-inner p {
-  margin: 2rem 0;
-}
-
-.blog-inner .sec h4,
-.blog-inner .sec-img h4 {
-  font-size: 24px;
-  line-height: 38.4px;
-  font-weight: 400;
-}
-
-.blog-inner .sec p {
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.blog-inner .sec {
-  margin-left: 1rem;
-}
-
-.blog-inner .sec-img img {
-  height: 430px;
-}
-
-.blog-inner .sec-img .img {
-  position: relative;
-}
-
-.blog-inner .sec-img .img .black-box {
-  opacity: 40% !important;
-}
-
-.blog-inner .sec-img {
-  position: relative;
-}
-
-.blog-inner .sec-img .text {
+/* (옵션) 캡션 박스가 이미지 위에 뜨는 경우를 위해 포지셔닝 보정 */
+.products-grid .black-box {
   position: absolute;
-  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
 }
 
-.blog-inner ul {
-  margin-bottom: 2rem;
+/* 반응형: 태블릿 2열, 모바일 1열 */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
-
-.blog-inner ul li {
-  list-style: disc;
-  margin-left: 2.3rem;
-}
-
-.next {
-  position: relative;
-}
-
-.next .col-6 a {
-  color: var(--black-color);
-}
-
-.next .icon {
-  font-size: 80% !important;
-  line-height: 19.2px;
-  font-weight: 700 !important;
-  letter-spacing: 0.05em;
-}
-
-.next span {
-  position: absolute;
-  color: var(--blog-span-color);
-  left: 48.6%;
-  bottom: 43%;
-}
-
-.next span::before {
-  content: "|";
-}
-
-.reply p {
-  font-size: 13.6px;
-  line-height: 14.6px;
-  font-style: italic;
-  margin: 0.8rem 0 1.3rem;
-}
-
-.reply input,
-textarea {
-  outline: none;
-}
-
-.reply .form-check-label {
-  font-size: 90%;
-  line-height: 19.8833px;
-}
-
-.reply .btn {
-  color: var(--white-color);
-  background-color: var(--black-color);
-  padding: 13px 50px;
-}
-
-/* uncategorized-page----------------------------------------- */
-
-.uncategorized-page .col-6 .img .inner-img img {
-  height: 315px;
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* contact-page----------------------------------------- */
