@@ -622,11 +622,6 @@ header {
   height: 329px;
 }
 
-/* blog */
-
-.blog img {
-  height: 250px;
-}
 
 /* faq */
 
@@ -849,7 +844,7 @@ header {
   align-items: center;
   transition: opacity 0.3s ease;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: clamp(14px, 2vw, 18px);/* 반응형 글자 크기 */
   font-weight: 500;
   text-align: center;
   line-height: 2;
