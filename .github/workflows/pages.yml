@@ -1,34 +1,28 @@
-name: pages build and deployment
+name: pages
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
 
 permissions:
-  contents: read
   pages: write
   id-token: write
+  contents: read
 
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  build:
+  upload:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm ci
-      - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist   # ← Vite/React 빌드 폴더 맞춰줘
-
+          path: ./           # 루트 전체(불필요한 것은 .gitignore로 제외)
   deploy:
-    needs: build
+    needs: upload
     runs-on: ubuntu-latest
     environment:
       name: github-pages
