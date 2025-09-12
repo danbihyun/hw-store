@@ -3,6 +3,7 @@
   --card: #ffffff;
   --brand: #000000;
   --brand-700: #000000;
+  --line: #e5e7eb;
 }
 * {
   box-sizing: border-box;
@@ -19,8 +20,6 @@ body {
   margin: 0 auto;
   padding: 0 16px;
 }
-
-
 
 /* 브레드크럼 */
 .breadcrumb {
@@ -74,22 +73,26 @@ body {
   display: grid;
   place-items: center;
   border: none;
-  background: none;       /* ✅ 배경 제거 */
+  background: none; /* ✅ 배경 제거 */
   cursor: pointer;
-  opacity: .7;
+  opacity: 0.7;
   z-index: 5;
-  transition: opacity .2s, transform .2s;
+  transition: opacity 0.2s, transform 0.2s;
 }
 .preview .nav:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.15); /* hover 시 살짝 커짐 */
 }
-.preview .prev { left: 12px; }
-.preview .next { right: 12px; }
+.preview .prev {
+  left: 12px;
+}
+.preview .next {
+  right: 12px;
+}
 .preview .nav i {
-  font-size: 28px;       /* 아이콘 크게 */
-  color: #fff;           /* 이미지 위에서 잘 보이게 흰색 */
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5); /* ✅ 가독성 확보 */
+  font-size: 28px; /* 아이콘 크게 */
+  color: #fff; /* 이미지 위에서 잘 보이게 흰색 */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* ✅ 가독성 확보 */
 }
 .preview .nav:hover {
   opacity: 1;
@@ -188,23 +191,38 @@ body {
   background: #fff;
 }
 .title {
+  color: #111827;
   margin: 0;
   font-size: 30px;
   font-weight: 800;
 }
-.price-block {
+.price-row {
   display: flex;
   align-items: baseline;
   gap: 8px;
   padding: 6px 0 16px;
   border-bottom: 1px solid var(--border);
 }
-.price-block .price {
+.price-row .num {
+  color: #111827;
   font-size: 28px;
   font-weight: 800;
 }
-.price-block .unit {
+.price-row .unit {
   color: #4b5563;
+}
+
+/* 선택 영역 클래스도 맞추기 */
+.option-row {
+  /* ← 기존 .select-row 대체 */
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.option-row label {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 14px;
 }
 
 /* 수량 박스 */
@@ -351,23 +369,31 @@ body {
 }
 
 /* 숫자 input 기본 화살표 제거 */
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
 
 /* 탭 기본/활성 표시 */
-.panel{ display:none; }
-.panel.active{ display:block; }
+.panel {
+  display: none;
+}
+.panel.active {
+  display: block;
+}
 
-.tab-link{ border-bottom:2px solid transparent; }
-.tab-link.active{ border-color: var(--brand); font-weight:700; color:#111827; }
-
-
+.tab-link {
+  border-bottom: 2px solid transparent;
+}
+.tab-link.active {
+  border-color: var(--brand);
+  font-weight: 700;
+  color: #111827;
+}
 
 /* 반응형 */
 @media (max-width: 980px) {

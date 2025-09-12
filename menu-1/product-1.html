@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,10 +27,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
-    <!-- owl-carousel -->
-    <link rel="stylesheet" href="https://html.code4rest.com/HTML/18_Doartist/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://html.code4rest.com/HTML/18_Doartist/css/owl.theme.default.min.css">
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
+    <!-- OwlCarousel2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css"
+    />
 
     <!-- Glightbox -->
     <link
@@ -67,19 +74,14 @@
       <nav class="navbar navbar-main navbar-expand-lg p-0">
         <div class="container-fluid">
           <div class="col-2">
-            <a
-              href="../index.html"
-              class="logo d-flex justify-content-start"
-            >
+            <a href="../index.html" class="logo d-flex justify-content-start">
               <img src="../image/logo-2.png" alt="" />
             </a>
           </div>
           <div class="col-10 d-flex justify-content-end">
             <ul class="navbar-nav text-uppercase">
               <li class="nav-item pe-4 d-flex align-items-center">
-                <a aria-current="page" href="../login.html"
-                  >로그인/회원가입</a
-                >
+                <a aria-current="page" href="../login.html">로그인/회원가입</a>
               </li>
               <li class="nav-item d-flex align-items-center">
                 <div class="dropdown">
@@ -88,27 +90,37 @@
                   </a>
                   <ul class="dropdown-menu py-0 rounded-0 border-0">
                     <li>
-                      <a class="dropdown-item border-bottom" href="../menu-1.html"
+                      <a
+                        class="dropdown-item border-bottom"
+                        href="../menu-1.html"
                         >아크릴비즈</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item border-bottom" href="../menu-1.html"
+                      <a
+                        class="dropdown-item border-bottom"
+                        href="../menu-1.html"
                         >진주/자개비즈</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item border-bottom" href="../menu-1.html"
+                      <a
+                        class="dropdown-item border-bottom"
+                        href="../menu-1.html"
                         >925실버비즈</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item border-bottom" href="../menu-1.html"
+                      <a
+                        class="dropdown-item border-bottom"
+                        href="../menu-1.html"
                         >시드비즈</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item border-bottom" href="../menu-1.html"
+                      <a
+                        class="dropdown-item border-bottom"
+                        href="../menu-1.html"
                         >펜던트류</a
                       >
                     </li>
@@ -119,18 +131,10 @@
                 </div>
               </li>
               <li class="nav-item px-4 d-flex align-items-center">
-                <a
-                  aria-current="page"
-                  href="../menu-1.html"
-                  >장바구니</a
-                >
+                <a aria-current="page" href="../menu-1.html">장바구니</a>
               </li>
               <li class="nav-item px-4 d-flex align-items-center">
-                <a
-                  aria-current="page"
-                  href="../menu-1.html"
-                  >고객센터</a
-                >
+                <a aria-current="page" href="../menu-1.html">고객센터</a>
               </li>
             </ul>
 
@@ -148,7 +152,7 @@
       </nav>
     </header>
 
-        <!-- Modal -->
+    <!-- Modal -->
     <div
       class="modal fade"
       id="staticBackdrop"
@@ -319,19 +323,18 @@
 
     <!-- main -->
     <main>
-     <section class="top top-img wow fadeIn" data-wow-duration="1s">
+      <section class="top top-img wow fadeIn" data-wow-duration="1s">
         <div class="top-text">
-            <div class="text-inner">
-                <h2 class="text-uppercase text-white mt-0">아크릴비즈</h2>
-                    <div class="d-flex text-white justify-content-center">
-                        <a href="../index.html"><i class="fa-solid fa-house"></i></a>
-                        <p class="mb-0"><span class="mx-1">/</span>아크릴비즈</p>
-                    </div>
-                </div>
+          <div class="text-inner">
+            <h2 class="text-uppercase text-white mt-0">아크릴비즈</h2>
+            <div class="d-flex text-white justify-content-center">
+              <a href="../index.html"><i class="fa-solid fa-house"></i></a>
+              <p class="mb-0"><span class="mx-1">/</span>아크릴비즈</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
-
 
     <!-- 브레드크럼 -->
     <nav class="breadcrumb container">
@@ -346,17 +349,46 @@
       <!-- 갤러리 -->
       <div class="gallery">
         <div class="preview">
-          <button class="nav prev" aria-label="이전"><i class="fa-solid fa-chevron-left"></i></button>
-          <img id="mainImage" src="../image/showcase-9.jpg" alt="통과형 진주통통나비" />
-          <button class="nav next" aria-label="다음"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="nav prev" aria-label="이전">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <img
+            id="mainImage"
+            src="../image/showcase-9.jpg"
+            alt="통과형 진주통통나비"
+          />
+          <button class="nav next" aria-label="다음">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
 
         <div class="thumbs">
-          <img src="../image/showcase-9.jpg" data-target="../image/showcase-9.jpg" class="active" alt="thumb1" />
-          <img src="../image/showcase-9.jpg" data-target="../image/showcase-9.jpg" alt="thumb2" />
-          <img src="../image/showcase-9.jpg" data-target="../image/showcase-9.jpg" alt="thumb3" />
-          <img src="../image/showcase-9.jpg" data-target="../image/showcase-9.jpg" alt="thumb4" />
-          <img src="../image/showcase-9.jpg" data-target="../image/showcase-9.jpg" alt="thumb5" />
+          <img
+            src="../image/showcase-9.jpg"
+            data-target="../image/showcase-9.jpg"
+            class="active"
+            alt="thumb1"
+          />
+          <img
+            src="../image/showcase-9.jpg"
+            data-target="../image/showcase-9.jpg"
+            alt="thumb2"
+          />
+          <img
+            src="../image/showcase-9.jpg"
+            data-target="../image/showcase-9.jpg"
+            alt="thumb3"
+          />
+          <img
+            src="../image/showcase-9.jpg"
+            data-target="../image/showcase-9.jpg"
+            alt="thumb4"
+          />
+          <img
+            src="../image/showcase-9.jpg"
+            data-target="../image/showcase-9.jpg"
+            alt="thumb5"
+          />
         </div>
       </div>
 
@@ -380,25 +412,28 @@
 
         <!-- 옵션 행 (좌: 라벨/셀렉트, 우: 수량 선택) -->
         <div class="option-row">
-            <div class="left">
-                <label for="optionMain">옵션 선택</label>
-                <div class="select-wrap">
-                <select id="optionMain">
-                    <option value="" selected>16.5x12mm 화이트</option>
-                </select>
-                </div>
+          <div class="left">
+            <label for="optionMain">옵션 선택</label>
+            <div class="select-wrap">
+              <select id="optionMain">
+                <option value="" selected>16.5x12mm 화이트</option>
+              </select>
             </div>
+          </div>
 
-            <div class="right" style="margin-top:10px">
-                <label for="qty">수량</label>
-                <div class="qty-box">
-                <button type="button" class="minus" aria-label="수량 감소"><i class="fa-solid fa-minus"></i></button>
-                <input type="number" id="qty" value="1" min="1" />
-                <button type="button" class="plus" aria-label="수량 증가"><i class="fa-solid fa-plus"></i></button>
-                </div>
+          <div class="right" style="margin-top: 10px">
+            <label for="qty">수량</label>
+            <div class="qty-box">
+              <button type="button" class="minus" aria-label="수량 감소">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <input type="number" id="qty" value="1" min="1" />
+              <button type="button" class="plus" aria-label="수량 증가">
+                <i class="fa-solid fa-plus"></i>
+              </button>
             </div>
+          </div>
         </div>
-
 
         <!-- 결제 금액 -->
         <div class="pay-row">
@@ -424,13 +459,16 @@
 
       <div class="tab-panels">
         <article id="tab-detail" class="panel active">
-          <img src="../image/showcase-9-1.jpg" class="detail-image" alt="상세 이미지">
+          <img
+            src="../image/showcase-9-1.jpg"
+            class="detail-image"
+            alt="상세 이미지"
+          />
         </article>
         <article id="tab-reviews" class="panel"><p>리뷰 준비중…</p></article>
         <article id="tab-qa" class="panel"><p>문의 준비중…</p></article>
       </div>
     </section>
-  </main>
 
     <!-- all -->
     <script src="https://html.code4rest.com/HTML/18_Doartist/js/jquery.min.js"></script>
@@ -452,5 +490,5 @@
 
     <!-- custom -->
     <script src="../js/product.js"></script>
-</body>
+  </body>
 </html>
